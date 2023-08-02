@@ -1,38 +1,404 @@
+@font-face {
+  font-family: 'Codigra';
+  src: url('fonts/Codigra.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Type';
+  src: url('fonts/Mom«t___.ttf') format('truetype');
+}
+
+body {
+  overflow: hidden;
+}
+
 .App {
+  height: 100vh;
+  overflow: auto;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9999;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  position: relative;
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0;
+  transition: border-bottom-color 0.6s;
+  font-family: 'Type', sans-serif;
+  overflow: hidden;
+}
+
+button.active {
+  border-bottom-color: #fff;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s;
+}
+
+
+button:hover {
+  border-bottom-color: #fff;
+}
+
+button:hover::before {
+  transform: scaleX(0.6);
+}
+
+button.active::before {
+  transform: scaleX(1);
+}
+
+
+.content {
+  background: url('img/vitrola_background.gif') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
   text-align: center;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.grid-container h1 {
+  margin-bottom: 5px;
+  font-family: 'Codigra', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid-container p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: 'Type', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 52px;
+  color: #fff;
+  z-index: 2;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+  z-index: 2;
+}
+
+.name{
+  color: #ff7800
+}
+
+.hide-content {
+  display: none;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 calc(15% + 10px) 0 calc(15% - 10px);
+}
+
+.photo {
+  flex: 1;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  margin-right: 1%;
+  width: 80%;
+}
+
+
+.photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  margin-left: 1%;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 0 20px;
+}
+
+.text p {
+  color: #fff;
+  margin-bottom: 1%;
+  font-family: 'Type', sans-serif;
+  font-size: 12px;
+  text-align: left;
+  z-index: 2;
+}
+
+.typing-animation p {
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.15em;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  position: flex;
+  z-index: 2;
+}
+
+.icons {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
+}
+
+.icon-linkedin {
+  margin-right: 5px;
+}
+
+.icon-github {
+  margin-left: 5px;
+}
+
+.tech-stack{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.grid-tech-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-tech-stack img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s;
 }
 
-@keyframes App-logo-spin {
+.grid-tech-stack img:hover {
+  transform: scale(1.2);
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.5);
+}
+
+.loading-screen {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-screen img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.rotate-animation {
+  animation: rotateImage 1s;
+}
+
+.splash-screen p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: 'Type', sans-serif;
+}
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lines{
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  size: 14px;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.15em;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  position: flex;
+  z-index: 2;
+}
+
+.rotate-backteste-animation {
+  animation: rotateBackTesteImage 1s;
+}
+
+@keyframes rotateBackTesteImage {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    width: 100%;
   }
 }
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: white;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
