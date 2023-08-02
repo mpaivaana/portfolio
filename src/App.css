@@ -9,7 +9,7 @@
 }
 
 body {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .App {
@@ -25,7 +25,7 @@ body {
   background: #000;
   padding: 10px 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   z-index: 9999;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .navbar ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .navbar ul li a {
@@ -54,7 +54,7 @@ button {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 10px 20px;
   margin: 0;
   transition: border-bottom-color 0.6s;
   font-family: 'Type', sans-serif;
@@ -179,8 +179,7 @@ p {
 
 .photo img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
+  height: 100%;
 }
 
 .grid-about-me {
@@ -323,7 +322,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   background: black;
   display: flex;
   justify-content: center;
@@ -401,5 +400,3 @@ p {
     transform: translateY(0);
   }
 }
-
-
