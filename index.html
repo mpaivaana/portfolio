@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Paiva | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Red+Hat+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-neutral-900 text-white overflow-x-hidden">
+  <div id="loadingScreen">
+    <div class="loader"></div>
+    <p class="loading-text">Carregando...</p>
+  </div>
+  
+  <div class="fixed right-[-180px] top-1/2 -translate-y-1/2 md:right-[-180px] md:top-1/2 md:-translate-y-1/2 lg:right-[-180px] lg:top-1/2 lg:-translate-y-1/2 max-md:right-1/2 max-md:translate-x-1/2 max-md:bottom-[-125px] max-md:top-auto max-md:translate-y-0 z-50">
+    <div id="circleMenu">
+      <div id="icon0" class="icon absolute" data-section="2">
+        <img src="images/stack.svg" />
+      </div>
+      <div id="icon1" class="icon absolute" data-section="1">
+        <img src="images/personal.svg" />
+      </div>
+      <div id="icon2" class="icon absolute" data-section="0">
+        <img src="images/home.svg" />
+      </div>
+    </div>
+  </div>
+  
+  <section class="h-screen flex flex-col justify-between px-6 py-12 sm:px-12 sm:py-16 md:px-20 md:py-20 lg:px-32 lg:py-24 xl:px-40 xl:py-32 relative overflow-hidden" id="sec0">
+    <video class="video-background" autoplay loop muted playsinline id="bgVideo" preload="auto">
+      <source src="images/background.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    
+    <div class="relative z-10">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-normal" style="font-family: 'Gloock', serif;">.Ana Paiva</h1>
+    </div>
+    
+    <div class="max-w-3xl relative z-10">
+      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed" style="font-family: 'Red Hat Display', sans-serif; font-weight: 400;">
+        Websites, sistemas web, automações, UI/UX e criação de logotipos — tecnologia criativa.
+      </p>
+    </div>
+    
+    <div class="flex gap-8 sm:gap-12 md:gap-16 relative z-10 mb-20 md:mb-0">
+      <a href="https://www.linkedin.com/in/ap-paiva/" class="social-logo">
+        <img src="images/linkedin_logo.svg" alt="LinkedIn" class="w-8 h-8 sm:w-10 sm:h-10">
+      </a>
+      <a href="https://github.com/mpaivaana" class="social-logo">
+        <img src="images/github_logo.svg" alt="GitHub" class="w-8 h-8 sm:w-10 sm:h-10">
+      </a>
+      <a href="http://lattes.cnpq.br/2309291370394062" class="social-logo">
+        <img src="images/lattes_logo.svg" alt="Lattes" class="w-8 h-8 sm:w-10 sm:h-10">
+      </a>
+    </div>
+  </section>
+  
+  <section class="h-screen flex flex-col justify-between px-6 py-12 sm:px-12 sm:py-16 md:px-20 md:py-20 lg:px-32 lg:py-24 xl:px-40 xl:py-32 relative bg-neutral-900" id="sec1">
+    <div class="relative z-10">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-normal" style="font-family: 'Gloock', serif;">.Prazer</h1>
+    </div>
+    
+    <div class="relative z-10 flex flex-col gap-8 mb-20 md:mb-0">
+      <div class="relative w-48 sm:w-56 md:w-64 h-auto">
+        <img id="coverAdult" src="images/cover_adult.png" alt="Cover Adult" class="w-full h-auto transition-all duration-300" style="clip-path: inset(0 0 0 0);">
+        <img id="coverKid" src="images/cover_kid.png" alt="Cover Kid" class="absolute top-0 left-0 w-full h-auto transition-all duration-300" style="clip-path: inset(0 100% 0 0);">
+      </div>
+      
+      <div class="max-w-2xl">
+        <p class="text-sm sm:text-base lg:text-lg leading-relaxed" style="font-family: 'Red Hat Display', sans-serif; font-weight: 400;">
+          Sou desenvolvedora de software com formação técnica em Informática pelo Instituto Federal do Sul de Minas Gerais e experiência em projetos que unem tecnologia, criatividade e impacto social. Atuo no Efí Bank com integrações de APIs e automação financeira, e já contribui com curadoria de dados para IA no projeto BIA (Bradesco). Também acumulo vivências em blockchain, eletrônica embarcada e projetos educacionais envolvendo arte e tecnologia. Hoje curso Sistemas de Informação na Unicamp e sigo em busca de criar soluções eficientes, éticas e realmente úteis para as pessoas.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="h-screen flex flex-col justify-between px-6 py-12 sm:px-12 sm:py-16 md:px-20 md:py-20 lg:px-32 lg:py-24 xl:px-40 xl:py-32 relative" id="sec2" style="background: linear-gradient(135deg, #000000 0%, #212121 50%, #272727 100%);">
+    <div class="relative z-10">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-normal" style="font-family: 'Gloock', serif;">.Sala dourada</h1>
+    </div>
+    
+    <div class="relative z-10 grid grid-cols-3 gap-3 max-w-3xl mb-20 md:mb-0">
+      <div class="tech-card cursor-pointer" data-tech="figma">
+        <div class="tech-card-inner">
+          <div class="tech-card-front">
+            <img src="images/front_figma.png" alt="Figma" class="w-full h-auto">
+          </div>
+          <div class="tech-card-back">
+            <img src="images/back_figma.png" alt="Figma Back" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-card cursor-pointer" data-tech="javascript">
+        <div class="tech-card-inner">
+          <div class="tech-card-front">
+            <img src="images/front_javascript.png" alt="JavaScript" class="w-full h-auto">
+          </div>
+          <div class="tech-card-back">
+            <img src="images/back_javascript.png" alt="JavaScript Back" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-card cursor-pointer" data-tech="tailwind">
+        <div class="tech-card-inner">
+          <div class="tech-card-front">
+            <img src="images/front_tailwind.png" alt="Tailwind" class="w-full h-auto">
+          </div>
+          <div class="tech-card-back">
+            <img src="images/back_tailwind.png" alt="Tailwind Back" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-card cursor-pointer" data-tech="python">
+        <div class="tech-card-inner">
+          <div class="tech-card-front">
+            <img src="images/front_python.png" alt="Python" class="w-full h-auto">
+          </div>
+          <div class="tech-card-back">
+            <img src="images/back_python.png" alt="Python Back" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-card cursor-pointer" data-tech="react">
+        <div class="tech-card-inner">
+          <div class="tech-card-front">
+            <img src="images/front_react.png" alt="React" class="w-full h-auto">
+          </div>
+          <div class="tech-card-back">
+            <img src="images/back_react.png" alt="React Back" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-card cursor-pointer" data-tech="mysql">
+        <div class="tech-card-inner">
+          <div class="tech-card-front">
+            <img src="images/front_mysql.png" alt="MySQL" class="w-full h-auto">
+          </div>
+          <div class="tech-card-back">
+            <img src="images/back_mysql.png" alt="MySQL Back" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div></div>
+  </section>
+  
+  <footer class="w-full py-4 text-center text-xs text-neutral-400">
+    © <span id="year"></span> Desenvolvido por Ana Paiva
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
